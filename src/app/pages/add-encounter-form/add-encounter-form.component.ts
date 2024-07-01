@@ -31,6 +31,7 @@ export class AddEncounterFormComponent implements OnInit{
     this.service.addIncontro(this.incontro).subscribe({
       next: (resp) =>{
         console.log(resp);
+        this.reloadPage();
       },
       error: (err)=>{
         console.log(err);
@@ -45,7 +46,9 @@ export class AddEncounterFormComponent implements OnInit{
     idLuogo: {}
   }
 
-
+  reloadPage(){
+    window.location.reload();
+  }
 
   
 

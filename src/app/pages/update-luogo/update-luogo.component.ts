@@ -35,6 +35,7 @@ export class UpdateLuogoComponent implements OnInit{
     this.service.updateLuoghi(this.luogo).subscribe({
       next: (resp)=>{
         console.log(resp);
+        this.reloadPage();
         
       },
       error: (err)=>{
@@ -44,6 +45,8 @@ export class UpdateLuogoComponent implements OnInit{
     })
   }
 
-  
+  reloadPage(){
+    window.location.reload();
+  }
 
 }

@@ -30,15 +30,25 @@ export class CreateLuoghiComponent {
 
 
   onSubmit(){
+    
     this.service.addLuoghi(this.luogo).subscribe({
       next : (response : any) =>{
         console.log(response);
+        this.reloadPage();
       },
       error : (error) => { 
         console.log("Something went wrong..", error);
         
       }
     })
+
+    
+  }
+
+  
+  reloadPage(){
+    window.location.reload();
   }
 
 }
+

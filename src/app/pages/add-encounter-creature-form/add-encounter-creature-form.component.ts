@@ -28,6 +28,7 @@ export class AddEncounterCreatureFormComponent implements OnInit{
     this.service.addIncontro(this.incontro).subscribe({
       next: (resp) =>{
         console.log(resp);
+        this.reloadPage();
       },
       error: (err)=>{
         console.log(err);
@@ -44,6 +45,8 @@ export class AddEncounterCreatureFormComponent implements OnInit{
 
 
 
-  
+  reloadPage(){
+    window.location.reload();
+  }
 
 }

@@ -31,6 +31,7 @@ export class CardComponent{
       this.service.deleteLuoghi(id).subscribe({
         next : (resp)=>{
           console.log(resp);
+          this.reloadPage();
           
         },
         error : (err) => {
@@ -44,6 +45,7 @@ export class CardComponent{
       this.service.updateLuoghi(luogo).subscribe({
         next : (resp) => {
           console.log(resp);
+          this.reloadPage();
           
         },
         error : (err) =>{
@@ -81,5 +83,7 @@ export class CardComponent{
     }) 
     }
 
-
+    reloadPage(){
+      window.location.reload();
+    }
 }
