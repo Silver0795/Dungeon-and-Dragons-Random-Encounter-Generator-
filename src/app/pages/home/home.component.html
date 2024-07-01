@@ -1,0 +1,20 @@
+
+
+
+<div class="pb-5 pt-5 flex flex-col h-screen">
+    <div class="flex justify-center flex-wrap gap-5">
+        @for (item of cards; track $index) {
+            <app-card [luogo]="item"></app-card>
+        }@empty {
+            <p>none</p>
+        }
+    </div>
+
+    <app-footer></app-footer>
+
+    <div class="fixed bottom-10 right-10">
+        <button (click)="openForm()" mat-fab class="button_cyan" title="Aggiungi Luogo">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
+</div>

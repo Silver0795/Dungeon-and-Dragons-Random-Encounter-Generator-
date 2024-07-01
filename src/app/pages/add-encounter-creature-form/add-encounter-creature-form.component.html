@@ -1,0 +1,37 @@
+
+
+<div class="flex justify-center text-center">
+    <form (ngSubmit)="onSubmit()" class="w-[27rem] p-6 rounded-lg shadow-md">
+        <h2 mat-dialog-title>Aggiungi Incontro Creatura</h2>
+        
+        <mat-form-field class="cdk-visually-hidden">
+            <mat-label>idLuogo</mat-label >
+            <input matInput name="idluogo"
+            [(ngModel)]="incontro.idluogo">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <mat-label>Nome</mat-label>
+            <input matInput name="name"
+            [(ngModel)]="incontro.name">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <mat-label>Descrizione</mat-label>
+            <textarea matInput name="description"
+            [(ngModel)]="incontro.descrizione"></textarea>
+          </mat-form-field>
+    
+        <mat-form-field>
+            <mat-label>Link Immagine</mat-label>
+            <input matInput name="img"
+            [(ngModel)]="incontro.img">
+        </mat-form-field>
+
+    
+        <div>
+            <button mat-stroked-button color="primary" type="submit">Invia</button>
+        </div>
+    
+    </form>
+</div><p>add-encounter-creature-form works!</p>

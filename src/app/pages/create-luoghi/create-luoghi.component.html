@@ -1,0 +1,37 @@
+
+
+<div class="text-center">
+    <form (ngSubmit)="onSubmit()" class="w-[27rem] p-6 rounded-lg shadow-md">
+        <h2 mat-dialog-title>Inserisci Luogo</h2>
+        
+        <mat-form-field class="cdk-visually-hidden">
+            <mat-label>Nome</mat-label>
+            <input matInput name="id"
+            [(ngModel)]="luogo.id">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <mat-label>Nome</mat-label>
+            <input matInput name="name"
+            [(ngModel)]="luogo.name">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <mat-label>Descrizione</mat-label>
+            <textarea matInput name="descrizione"
+            [(ngModel)]="luogo.descrizione"></textarea>
+          </mat-form-field>
+    
+        <mat-form-field>
+            <mat-label>Link Immagine</mat-label>
+            <input matInput name="img"
+            [(ngModel)]="luogo.img">
+        </mat-form-field>
+    
+    
+        <div>
+            <button mat-stroked-button color="primary" type="submit">Invia</button>
+        </div>
+    
+    </form>
+</div>

@@ -1,0 +1,39 @@
+
+
+<div class="w-[30rem] h-[20rem] p-6 rounded-lg shadow-md flex justify-center text-center">
+
+
+    <div>
+        @if (risultatoDado<=12) {
+            <h2>Hai rollato {{risultatoDado}}</h2>
+            <h4>Sembra tutto tranquillo</h4>
+        }@else if (risultatoDado > 12 && risultatoDado<16) {
+            <h2>Hai rollato {{risultatoDado}}</h2> 
+            <h4>Incontrate un terreno:</h4>
+            <!-- Qui andrà la card degli incontri terreni -->
+           
+            <h1>{{IncontroTerreno.name}}</h1>
+            <p>{{IncontroTerreno.descrizione}}</p>
+               
+            
+        }@else if (risultatoDado > 15 && risultatoDado < 19) {
+            <h2>Hai rollato {{risultatoDado}}</h2>
+            <h4>Incontrate una o più creature:</h4>
+            <h1>{{IncontroCreatura.name}}</h1>
+            <p>{{IncontroCreatura.descrizione}}</p>
+        }@else {
+            <h2>Hai rollato {{risultatoDado}}</h2>
+            <h4>Incontrate una o più creature in un terreno specifico!</h4>
+            
+            <h1>{{IncontroCreatura.name}} in {{IncontroTerreno.name}}</h1>
+            <p>
+                {{IncontroCreatura.descrizione}}
+                {{IncontroTerreno.descrizione}}
+            </p>
+        }
+    </div>
+
+    
+
+
+</div>
