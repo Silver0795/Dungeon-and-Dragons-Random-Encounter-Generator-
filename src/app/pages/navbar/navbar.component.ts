@@ -12,4 +12,8 @@ import {MatButtonModule} from '@angular/material/button';
 })
 export class NavbarComponent {
 
+  scrollToTop(){
+    window.scrollTo(0,0);
+  }
+
 }
