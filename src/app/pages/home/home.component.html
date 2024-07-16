@@ -2,7 +2,7 @@
 
 
 <div class="pb-5 pt-5 flex flex-col h-screen">
-    <div class="flex justify-center flex-wrap gap-5">
+    <div class="flex justify-center flex-wrap gap-5 mt-24">
         @for (item of cards; track $index) {
             <app-card [luogo]="item"></app-card>
         }@empty {

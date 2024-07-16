@@ -22,8 +22,6 @@ export class DeleteDialogComponent implements OnInit{
   ngOnInit(): void {
     this.luogo= this.data;
   }
-  
-  
 
   deleteLuogo(id : number) {
     this.service.deleteLuoghi(id).subscribe({

@@ -4,7 +4,7 @@
       <mat-card-title class="pb-5">{{luogo.name}}</mat-card-title>
     </mat-card-header>
     <img mat-card-image  src="{{luogo.img}}"  class="imgCard">
-    <mat-card-content >
+    <mat-card-content [style.overflow]="'auto'" [style.height.px]="'100'">
       <p class="p-2">
       {{luogo.descrizione}}
       </p>
