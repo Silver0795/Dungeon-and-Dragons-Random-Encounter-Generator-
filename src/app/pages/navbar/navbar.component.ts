@@ -27,7 +27,7 @@ export class NavbarComponent {
   }
 
   openSnackBar() {
-    this._snackBar.open("Copied to clipboard", "", {duration: 3000})
+    this._snackBar.open("Copied to clipboard", "", {duration: 2000})
   }
 
 }
